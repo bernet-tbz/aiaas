@@ -21,8 +21,7 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "python.venvPath": "/opt",
-        "python.defaultInterpreterPath": "/opt/jupyter/bin/python"
+        "python.venvPath": "/opt"
       },
       "extensions": [
         "ms-python.python",
