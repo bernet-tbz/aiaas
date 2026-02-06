@@ -23,7 +23,9 @@ WORKDIR /workspace
 # -------------------------
 RUN python3 -m venv /opt/jupyter \
  && /opt/jupyter/bin/pip install --upgrade pip \
- && /opt/jupyter/bin/pip install jupyterlab ipykernel
+ && /opt/jupyter/bin/pip install jupyterlab ipykernel \
+ && /opt/jupyter/bin/python -m ipykernel install \
+      --sys-prefix --name=jupyter --display-name="Python (jupyter)"
 
 # -------------------------
 # AI Kernel
