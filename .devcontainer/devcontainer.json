@@ -8,12 +8,7 @@
 	"mounts": [
 		"source=${localWorkspaceFolder},target=/workspace,type=bind"
 	],
-	
-	"containerEnv": {
-		"DISPLAY": "",
-		"WAYLAND_DISPLAY": ""
-	},
-	
+
 	"customizations": {
 		"vscode": {
 			"settings": {
