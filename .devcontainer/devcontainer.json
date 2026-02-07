@@ -1,51 +1,43 @@
 {
-  "name": "Python Multi-Kernel DevContainer",
-  
-    "build": {
-        "dockerfile": "./Dockerfile",
-        "context": "."
-    },
-  
-  "mounts": [
-    "source=${localWorkspaceFolder},target=/workspace,type=bind"
-  ],
-
-  "containerEnv": {
-    "DISPLAY": "",
-    "WAYLAND_DISPLAY": ""
-  },
-  
-  "customizations": {
-    "vscode": {
-      "settings": {
-        "python.venvPath": "/opt",
-        "python.defaultInterpreterPath": "/opt/jupyter/bin/python"
-      },
-      "extensions": [
-        "ms-python.python",
-        "ms-toolsai.jupyter"
-      ]
-    }
-  },
-  
-    "features": {
-        "ghcr.io/devcontainers/features/common-utils:2": {
-            "username": "vscode",
-            "userUid": "1000",
-            "userGid": "1000"
-        }
-    },  
-  
-    // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    // "forwardPorts": [],
-
-    // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "cd /workspaces/aiaas && curl -L https://github.com/mc-b/lernvirt/archive/refs/heads/main.tar.gz | tar xz --strip-components=3 lernvirt-main/examples/aiaas --exclude='*/'",
-
-    // Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-    "remoteUser": "vscode", 
-  
-  "runArgs": [
-    "--security-opt=label=disable"
-  ]
+	"name": "Python Multi-Kernel DevContainer",
+	"build": {
+		"dockerfile": "./Dockerfile",
+		"context": "."
+	},
+	
+	"mounts": [
+		"source=${localWorkspaceFolder},target=/workspace,type=bind"
+	],
+	
+	"containerEnv": {
+		"DISPLAY": "",
+		"WAYLAND_DISPLAY": ""
+	},
+	
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.venvPath": "/opt",
+				"python.defaultInterpreterPath": "/opt/jupyter/bin/python"
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-toolsai.jupyter"
+			]
+		}
+	},
+	
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"username": "vscode",
+			"userUid": "1000",
+			"userGid": "1000"
+		}
+	},
+	
+	"postCreateCommand":"cd /workspaces/aiaas && curl -L https://github.com/mc-b/lernvirt/archive/refs/heads/main.tar.gz | tar xz --strip-components=3 lernvirt-main/examples/aiaas --exclude='*/'","remoteUser":"vscode",
+	
+	"runArgs": [
+		"--security-opt=label=disable"
+	]
 }
