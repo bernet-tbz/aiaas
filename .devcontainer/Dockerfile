@@ -67,5 +67,3 @@ RUN python3 -m venv /opt/mcp \
  && /opt/mcp/bin/python -m ipykernel install \
       --sys-prefix --name=mcp --display-name="Python (mcp)"
 
-WORKDIR /workspace
-RUN curl -L https://github.com/mc-b/lernvirt/archive/refs/heads/main.tar.gz | tar xz --strip-components=3 lernvirt-main/examples/aiaas --exclude='*/'
