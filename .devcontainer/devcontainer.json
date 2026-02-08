@@ -26,7 +26,7 @@
 		}
 	},
 	
-	"postCreateCommand":"cd /workspaces/aiaas && curl -L https://github.com/mc-b/lernvirt/archive/refs/heads/main.tar.gz | tar xz --strip-components=3 lernvirt-main/examples/aiaas --exclude='*/'","remoteUser":"vscode",
+	"postCreateCommand":"mkdir -p /workspaces/aiaas/data && cd /workspaces/aiaas/data && curl -L https://github.com/mc-b/lernvirt/archive/refs/heads/main.tar.gz | tar xz --strip-components=3 lernvirt-main/examples/aiaas --exclude='*/'","remoteUser":"vscode",
 	
 	"runArgs": [
 		"--security-opt=label=disable"
